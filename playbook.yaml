@@ -1,0 +1,10 @@
+- name: Test
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Adding tag vars
+      include_vars:
+        file: 'test1.yaml'
+    - name: debug
+      debug:
+        msg: "{{ vars['test1'] }}"
