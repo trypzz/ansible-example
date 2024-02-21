@@ -1,1 +1,2 @@
-test1: "{{ ansible_inventory }}"
+blabla: "bla bla"
+test1: "{{ blabla }}"

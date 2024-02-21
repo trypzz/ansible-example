@@ -1,0 +1,11 @@
+- name: Test
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Adding tag vars
+      include_vars:
+        file: 'test1.yaml'
+      register: test
+    - name: debug
+      debug:
+        msg: "{{ test.ansible_facts.test1 }}"
